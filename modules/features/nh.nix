@@ -7,7 +7,10 @@
         enable = true;
         extraArgs = "--keep-since 14d --max 3";
       };
-      flake = "~/nixos-config/";
+    };
+
+    environment.sessionVariables = {
+      NH_FLAKE = "$HOME/nixos-config";
     };
   };
 }
