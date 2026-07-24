@@ -62,7 +62,10 @@
       packages = with pkgs; [];
     };
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings = {
+      trusted-users = [ "sahara_surfer" ];  # Allows to add cache servers
+      experimental-features = [ "nix-command" "flakes" ];  
+    };
 
     system.stateVersion = "26.05";
   };

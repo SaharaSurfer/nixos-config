@@ -1,10 +1,21 @@
 {
+  # This config is needed to skip compilation of noctalia
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+
+    # Beta version of noctalia which is not available in nixpkgs
+    noctalia.url = "github:noctalia-dev/noctalia/v5.0.0-beta.4";
 
     boot-wars-grub.url = "github:SaharaSurfer/boot-wars-grub";
     boot-wars-plymouth.url = "github:SaharaSurfer/boot-wars-plymouth";

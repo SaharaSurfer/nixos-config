@@ -74,9 +74,9 @@
 
           "Mod+M".maximize-column = {};
           "Mod+Q".close-window = {};
-          "Mod+L".spawn-sh = "${noctaliaExe} ipc call launcher toggle";
-          "Mod+S".spawn-sh = "${noctaliaExe} ipc call settings toggle";
-          "Mod+Shift+Q".spawn-sh = "${noctaliaExe} ipc call sessionMenu toggle";
+          "Mod+L".spawn-sh = "${noctaliaExe} msg panel-toggle launcher";
+          "Mod+S".spawn-sh = "${noctaliaExe} msg settings-toggle";
+          "Mod+Shift+Q".spawn-sh = "${noctaliaExe} msg panel-toggle session";
           "Mod+Shift+S".screenshot = {};
 
           "XF86AudioRaiseVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
