@@ -70,14 +70,16 @@
           "Mod+O".spawn-sh = lib.getExe pkgs.obsidian;
           "Mod+K".spawn-sh = lib.getExe self'.packages.kitty;
           "Mod+E".spawn-sh = "${kittyExe} -e yazi";
+          "Mod+Escape".spawn-sh = "${kittyExe} -e btop";
           "Mod+V".spawn-sh = "code";
 
           "Mod+M".maximize-column = {};
           "Mod+Q".close-window = {};
-          "Mod+L".spawn-sh = "${noctaliaExe} msg panel-toggle launcher";
           "Mod+S".spawn-sh = "${noctaliaExe} msg settings-toggle";
+          "Mod+L".spawn-sh = "${noctaliaExe} msg panel-toggle launcher";
+          "Mod+C".spawn-sh = "${noctaliaExe} msg panel-toggle clipboard";
           "Mod+Shift+Q".spawn-sh = "${noctaliaExe} msg panel-toggle session";
-          "Mod+Shift+S".screenshot = {};
+          "Mod+Shift+S".spawn-sh = "${noctaliaExe} msg screenshot-region";
 
           "XF86AudioRaiseVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
           "XF86AudioLowerVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
