@@ -57,5 +57,28 @@
           })  
         ];      
     };
+
+    # Some of the security measures described at
+    # wiki.nixos.org/wiki/NixOS_Hardening
+    # madaidans-insecurities.github.io/guides/linux-hardening.html
+    boot.kernel.sysctl = {
+      # Loose mode to allow split tunneling
+      "net.ipv4.conf.all.rp_filter" = 2;
+      "net.ipv4.conf.default.rp_filter" = 2;
+
+      "net.ipv4.conf.all.accept_redirects" = 0;
+      "net.ipv4.conf.default.accept_redirects" = 0;
+      "net.ipv4.conf.all.secure_redirects" = 0;
+      "net.ipv4.conf.default.secure_redirects" = 0;
+      "net.ipv6.conf.all.accept_redirects" = 0;
+      "net.ipv6.conf.default.accept_redirects" = 0;
+      "net.ipv6.conf.all.send_redirects" = 0;
+      "net.ipv6.conf.default.send_redirects" = 0;
+
+      "net.ipv4.conf.all.accept_source_route" = 0;
+      "net.ipv4.conf.default.accept_source_route" = 0;
+      "net.ipv6.conf.all.accept_source_route" = 0;
+      "net.ipv6.conf.default.accept_source_route" = 0;
+    };
   };
 }

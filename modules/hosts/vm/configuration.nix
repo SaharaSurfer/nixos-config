@@ -25,10 +25,8 @@
 
     # Networking
     networking.hostName = "nixos"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-    # Enable networking
     networking.networkmanager.enable = true;
+    networking.firewall.enable = true;
 
     # Set your time zone.
     time.timeZone = "Asia/Yekaterinburg";
@@ -61,6 +59,8 @@
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [];
     };
+
+    security.sudo.execWheelOnly = true;
 
     nix.settings = {
       trusted-users = [ "sahara_surfer" ];  # Allows to add cache servers
