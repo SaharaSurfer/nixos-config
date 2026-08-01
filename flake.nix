@@ -13,6 +13,11 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+    
+    hjem = {
+      url = "github:feel-co/hjem";
+      inputs.nixpkgs.follows = "nixpkgs"; 
+    };
 
     # Beta version of noctalia which is not available in nixpkgs
     noctalia.url = "github:noctalia-dev/noctalia/v5.0.0-beta.4";

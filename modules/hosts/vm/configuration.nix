@@ -6,6 +6,7 @@
         self.nixosModules.boot
         self.nixosModules.greetd
         self.nixosModules.nh
+        self.nixosModules.hjem
         self.nixosModules.niri
         self.nixosModules.fonts
 
