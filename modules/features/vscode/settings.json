@@ -1,0 +1,40 @@
+{
+    "extensions.ignoreRecommendations": true,
+
+    "python.createEnvironment.trigger": "off",
+    "python.terminal.activateEnvironment": false,
+
+    "jupyter.askForKernelRestart": false,
+
+    "editor.minimap.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+    "editor.rulers": [
+        80
+    ],
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+
+    "explorer.confirmDelete": false,
+
+    "chat.titleBar.signIn.enabled": false,
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.disableAIFeatures": true,
+
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Everforest Pro Dark",
+    "workbench.layoutControl.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreview": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.statusBar.visible": false,
+
+    "breadcrumbs.enabled": false,
+
+    "telemetry.telemetryLevel": "off"
+}
