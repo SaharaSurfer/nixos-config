@@ -65,7 +65,7 @@
           kittyExe = lib.getExe self'.packages.kitty;
           noctaliaExe = lib.getExe self'.packages.noctalia;
         in {
-          "Mod+B".spawn-sh = lib.getExe pkgs.brave;
+          "Mod+B".spawn-sh = "zen-beta";
           "Mod+T".spawn-sh = lib.getExe pkgs.telegram-desktop;
           "Mod+O".spawn-sh = lib.getExe pkgs.obsidian;
           "Mod+K".spawn-sh = lib.getExe self'.packages.kitty;

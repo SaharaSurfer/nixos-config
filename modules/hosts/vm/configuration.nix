@@ -6,7 +6,11 @@
         self.nixosModules.boot
         self.nixosModules.greetd
         self.nixosModules.nh
-        self.nixosModules.hjem
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+        }
         self.nixosModules.niri
         self.nixosModules.fonts
 
@@ -19,7 +23,7 @@
         self.nixosModules.yazi
         self.nixosModules.vscode
 
-        self.nixosModules.brave
+        self.nixosModules.zen-browser
         self.nixosModules.gimp
         self.nixosModules.telegram
       ];
@@ -69,5 +73,8 @@
     };
 
     system.stateVersion = "26.05";
+    home-manager.users.sahara_surfer = {
+      home.stateVersion = "26.05";
+    };
   };
 }

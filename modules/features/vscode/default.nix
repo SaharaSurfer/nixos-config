@@ -20,8 +20,8 @@
       ];
     };
 
-    hjem.users.sahara_surfer = {
-      files.".config/Code/User/settings.json".source = ./settings.json;
+    home-manager.users.sahara_surfer = {
+      home.file.".config/Code/User/settings.json".source = ./settings.json;
     };
   }; 
 }
