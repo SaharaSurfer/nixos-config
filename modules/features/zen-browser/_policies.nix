@@ -1,12 +1,23 @@
 {
   DisableTelemetry = true;
   DisableAppUpdate = true;
+  DontCheckDefaultBrowser = true;
+
   EnableTrackingProtection = {
     Value = true;
     Locked = true;
     Cryptomining = true;
     Fingerprinting = true;
     EmailTracking = true;
+  };
+
+  SanitizeOnShutdown = {
+    Cache = true;
+    FormData = true;
+    Cookies = false;
+    History = false;
+    Sessions = false;
+    SiteSettings = false;
   };
   
   NoDefaultBookmarks = true;
@@ -21,69 +32,63 @@
       "Qwant"
     ];
   };
+
+  HttpsOnlyMode = "force_enabled";
+  DNSOverHTTPS = {
+    Enabled = true;
+    ProviderURL = "https://dns.dnswarden.com/00000000000000000000028";
+    Fallback = true;
+  };
+
+  SkipTermsOfUse = true;
+  OverrideFirstRunPage = "";
+  OverridePostUpdatePage = "";
   
+  Homepage = {
+    URL = "";
+    StartPage = "previous-session";
+    NewTabOnRestore = false;
+  };
+
   Preferences = {
-    "dom.security.https_only_mode" = true;
-    "dom.security.https_only_mode_ever_enabled" = true;
-    "network.socket.ip_addr_any.disabled" = true;
-    
-    "signon.rememberSignons" = false;
-    "browser.formfill.enable" = false;
-    
-    "browser.startup.page" = 3;
-    "browser.startup.homepage" = "";
-    "browser.startup.firstrunSkipsHomepage" = true;
-    "browser.startup.homepage_override.mstone" = "ignore";
-    
     "browser.aboutConfig.showWarning" = false;
-    "browser.aboutwelcome.enabled" = false;
-    "browser.shell.checkDefaultBrowser" = false;
-    
-    "browser.newtabpage.activity-stream.enabled" = false;
+
     "browser.ctrlTab.sortByRecentlyUsed" = true;
-    "browser.toolbars.bookmarks.visibility" = "always";
     "browser.bookmarks.addedImportButton" = false;
-    
+    "browser.toolbars.bookmarks.visibility" = "always";
+
     "browser.urlbar.suggest.history" = false;
     "browser.urlbar.suggest.recentsearches" = false;
     "browser.urlbar.suggest.topsites" = false;
     "browser.urlbar.suggest.openpage" = true;
-    
-    "browser.search.update" = false;
-    "browser.discovery.enabled" = false;
-    
-    "extensions.webextensions.restrictedDomains" = "";
-    
-    "extensions.getAddons.cache.enabled" = false;
-    "extensions.getAddons.showPane" = false;
-    "extensions.htmlaboutaddons.recommendations.enabled" = false;
-    
-    "gfx.webrender.all" = true;
-    "widget.dmabuf.force-enabled" = true;
-    "network.http.http3.enable" = true;
   };
-  
-  OverrideFirstRunPage = "";
-  OverridePostUpdatePage = "";
-  
+    
   ExtensionSettings = {
     "uBlock0@raymondhill.net" = {
       installation_mode = "force_installed";
     };
   };
   
+  DisableProfileImport = true;
   DisableAccounts = true;
+
   DisableFirefoxAccounts = true;
   DisableFirefoxScreenshots = true;
   DisableFirefoxStudies = true;
-  DisableProfileImport = true;
   
+  DisableFormHistory = true;
   AutofillAddressEnabled = false;
   AutofillCreditCardEnabled = false;
-  GenerativeAI.Enabled = false;
+
+  GenerativeAI = {
+    Enabled = false;
+    Chatbot = false;
+    LinkPreviews = false;
+    TabGroups = false;
+  };
+
   PasswordManagerEnabled = false;
   OfferToSaveLogins = false;
-  CaptivePortal = false;
   
   PromptForDownloadLocation = true;
   HardwareAcceleration = true;
