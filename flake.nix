@@ -26,9 +26,8 @@
     boot-wars-plymouth.url = "github:SaharaSurfer/boot-wars-plymouth";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
 
-    # github.com/0xc000022070/zen-browser-flake/issues/372
     zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake/a8f9b6d014c9cfe0615dccb2bc7808713f6e62c2";
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
