@@ -17,6 +17,7 @@
         self.nixosModules.ssh
         self.nixosModules.git
         self.nixosModules.jujutsu
+        self.nixosModules.starship
         self.nixosModules.fastfetch
         self.nixosModules.btop
         self.nixosModules.kitty
