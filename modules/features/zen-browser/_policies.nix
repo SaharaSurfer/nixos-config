@@ -61,6 +61,16 @@
     "browser.urlbar.suggest.recentsearches" = false;
     "browser.urlbar.suggest.topsites" = false;
     "browser.urlbar.suggest.openpage" = true;
+
+    "services.sync.engine.bookmarks" = true;
+    "services.sync.engine.addons" = false;
+    "services.sync.engine.addresses" = false;
+    "services.sync.engine.creditcards" = false;
+    "services.sync.engine.passwords" = false;
+    "services.sync.engine.history" = false;
+    "services.sync.engine.prefs" = false;
+    "services.sync.engine.tabs" = false;
+    "services.sync.engine.workspaces" = false;
   };
     
   ExtensionSettings = {
@@ -70,9 +80,6 @@
   };
   
   DisableProfileImport = true;
-  DisableAccounts = true;
-
-  DisableFirefoxAccounts = true;
   DisableFirefoxScreenshots = true;
   DisableFirefoxStudies = true;
   
