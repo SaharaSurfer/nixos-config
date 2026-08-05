@@ -24,8 +24,10 @@
         self.nixosModules.yazi
         self.nixosModules.vscode
 
-        self.nixosModules.zen-browser
+        self.nixosModules.imv
         self.nixosModules.gimp
+
+        self.nixosModules.zen-browser
         self.nixosModules.telegram
       ];
 
