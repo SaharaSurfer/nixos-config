@@ -1,4 +1,5 @@
 { self, inputs, ... }: {
+  # TODO: checkout yaziPlugins.*
   flake.nixosModules.yazi = { pkgs, ... }: {
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.yazi
