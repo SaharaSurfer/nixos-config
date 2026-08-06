@@ -18,6 +18,7 @@
       settings = {
         options.overlay = false;
 
+        # TODO: add binds for launching gimp and trashing
         binds = {
           "<Shift+R>" = "rotate by -90";
           r = "rotate by 90";
