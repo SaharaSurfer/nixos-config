@@ -14,9 +14,12 @@
         self.nixosModules.niri
         self.nixosModules.fonts
 
+        self.nixosModules.trash
+
         self.nixosModules.ssh
         self.nixosModules.git
         self.nixosModules.jujutsu
+
         self.nixosModules.starship
         self.nixosModules.fastfetch
         self.nixosModules.btop

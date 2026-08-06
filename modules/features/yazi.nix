@@ -28,6 +28,21 @@
         pkgs.fzf          # subtree navigation
         pkgs.zoxide       # better cd
         pkgs.ripgrep      # file content searching
+
+        # plugin dependencies
+        pkgs.trash-cli    # omni-trash
+      ];
+
+      plugins = with pkgs.yaziPlugins; {
+        omni-trash = omni-trash;
+      };
+
+      settings.keymap.mgr.prepend_keymap = [
+        {
+          on = [ "R" ];
+          run = "plugin omni-trash";
+          desc = "Open Omni Trash";
+        }
       ];
     };
   };
