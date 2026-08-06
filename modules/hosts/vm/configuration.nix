@@ -26,6 +26,7 @@
 
         self.nixosModules.imv
         self.nixosModules.gimp
+        self.nixosModules.mpv
 
         self.nixosModules.zen-browser
         self.nixosModules.telegram
