@@ -24,12 +24,13 @@
           };
         };
         
-        outputs = {
-          "Virtual-1" = {
-            mode = "1920x1080@60.000";
-            scale = 1.0;
-          };
-        };
+        # TODO: set actual monitor after installation
+        # outputs = {
+        #   "Virtual-1" = {
+        #     mode = "1920x1080@60.000";
+        #     scale = 1.0;
+        #   };
+        # };
 
         window-rule = {
           geometry-corner-radius = 10;
