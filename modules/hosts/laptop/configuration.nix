@@ -1,11 +1,11 @@
 { self, inputs, ... }: {
   flake.nixosModules.laptopConfiguration = { pkgs, lib, ... }: {
-    # TODO: add hardware configuration
     imports =
       [
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.hostLaptop
 
+        self.nixosModules.laptopHardware
         self.nixosModules.boot
         self.nixosModules.greetd
         self.nixosModules.nh
