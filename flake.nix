@@ -25,7 +25,7 @@
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     # Beta version of noctalia which is not available in nixpkgs
-    noctalia.url = "github:noctalia-dev/noctalia/v5.0.0-beta.4";
+    noctalia.url = "github:noctalia-dev/noctalia/v5.0.0-beta.8";
 
     boot-wars-grub.url = "github:SaharaSurfer/boot-wars-grub";
     boot-wars-plymouth.url = "github:SaharaSurfer/boot-wars-plymouth";
