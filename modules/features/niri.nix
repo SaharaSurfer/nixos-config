@@ -23,15 +23,12 @@
             options = "grp:win_space_toggle";
           };
         };
-        
-        # TODO: set actual monitor after installation
-        # outputs = {
-        #   "Virtual-1" = {
-        #     mode = "1920x1080@60.000";
-        #     scale = 1.0;
-        #   };
-        # };
 
+        input.touchpad = {
+          tap = {};
+          natural-scroll = {};
+        };
+        
         window-rule = {
           geometry-corner-radius = 10;
           clip-to-geometry = true;
