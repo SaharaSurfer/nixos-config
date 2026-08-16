@@ -7,6 +7,7 @@
 
         self.nixosModules.laptopHardware
         self.nixosModules.battery
+        self.nixosModules.graphics
         self.nixosModules.boot
         self.nixosModules.greetd
         self.nixosModules.nh
