@@ -29,6 +29,12 @@
           natural-scroll = {};
         };
         
+        gestures = {
+          hot-corners = {
+            off = {};
+          };
+        };
+
         window-rule = {
           geometry-corner-radius = 10;
           clip-to-geometry = true;
