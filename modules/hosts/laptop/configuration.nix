@@ -6,6 +6,7 @@
         self.diskoConfigurations.hostLaptop
 
         self.nixosModules.laptopHardware
+        self.nixosModules.battery
         self.nixosModules.boot
         self.nixosModules.greetd
         self.nixosModules.nh
