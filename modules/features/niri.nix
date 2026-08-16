@@ -85,9 +85,13 @@
           "Mod+Shift+Q".spawn-sh = "${noctaliaExe} msg panel-toggle session";
           "Mod+Shift+S".spawn-sh = "${noctaliaExe} msg screenshot-region";
 
-          "XF86AudioRaiseVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
-          "XF86AudioLowerVolume".spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
-          "XF86AudioMute".spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          "XF86AudioRaiseVolume".spawn-sh = "${noctaliaExe} msg volume-up 5%";
+          "XF86AudioLowerVolume".spawn-sh = "${noctaliaExe} msg volume-down 5%";
+          "XF86AudioMute".spawn-sh = "${noctaliaExe} msg volume-mute";
+
+          # TODO: fix these binds (Fn+F3 and Fn+F4 doesn't work)
+          "XF86MonBrightnessUp".spawn-sh = "${noctaliaExe} msg brightness-up 5%";
+          "XF86MonBrightnessDown".spawn-sh = "${noctaliaExe} msg brightness-down 5%";
 
           "Mod+Up".focus-window-up = {};
           "Mod+Down".focus-window-down = {};
