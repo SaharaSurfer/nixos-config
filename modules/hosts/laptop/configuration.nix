@@ -43,6 +43,26 @@
     networking.networkmanager.enable = true;
     networking.firewall.enable = true;
 
+    # Bluetooth
+    hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+      settings = {
+        General = {
+          Experimental = true;
+          FastConnectable = true;
+        };
+      };
+    };
+
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
     # Set your time zone.
     time.timeZone = "Asia/Yekaterinburg";
 
