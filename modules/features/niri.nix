@@ -20,7 +20,7 @@
         input.keyboard = {
           xkb = {
             layout = "us,ru";
-            options = "grp:win_space_toggle";
+            options = "grp:caps_toggle";
           };
         };
 
