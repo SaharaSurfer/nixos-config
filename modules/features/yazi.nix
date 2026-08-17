@@ -14,8 +14,6 @@
       };
 
       runtimePkgs = [
-        self.packages.${system}.imv
-
         # previews
         pkgs.ffmpeg       # video
         pkgs.jq           # json

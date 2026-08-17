@@ -32,7 +32,7 @@
         self.nixosModules.yazi
         self.nixosModules.vscode
 
-        self.nixosModules.imv
+        self.nixosModules.loupe
         self.nixosModules.gimp
         self.nixosModules.mpv
 
