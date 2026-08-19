@@ -11,11 +11,15 @@
       inherit pkgs;
       
       settings = {
+        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+
         spawn-at-startup = [
           (lib.getExe self'.packages.noctalia)
-        ];        
+        ];
 
-        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        hotkey-overlay = {
+          skip-at-startup = {};
+        };
 
         input.keyboard = {
           xkb = {
