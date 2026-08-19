@@ -22,6 +22,7 @@
         };
 
         input.keyboard = {
+          numlock = {};
           xkb = {
             layout = "us,ru";
             options = "grp:caps_toggle";
