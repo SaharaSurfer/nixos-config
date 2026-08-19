@@ -9,11 +9,14 @@
   "services.sync.engine.tabs" = false;
   "services.sync.engine.workspaces" = false;
 
+  "browser.theme.content-theme" = 0;
+  "layout.css.prefers-color-scheme.content-override" = 0;
+  "zen.view.window.scheme" = 0;
+
+  "zen.mods.auto-update" = false;
   "zen.welcome-screen.seen" = true;
   "zen.workspaces.continue-where-left-off" = true; 
   "zen.glance.enabled" = false;
-
-  "zen.view.window.scheme" = 0;
   "zen.view.use-single-toolbar" = false;
   "zen.view.compact.enable-at-startup" = false;
   "zen.tabs.show-newtab-vertical" = false;

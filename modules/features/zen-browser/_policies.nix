@@ -26,6 +26,7 @@
     Remove = [
       "Google"
       "Bing"
+      "Wikipedia (en)"
       "eBay"
       "Ecosia"
       "Perplexity"
@@ -56,9 +57,9 @@
     "browser.bookmarks.addedImportButton" = false;
     "browser.toolbars.bookmarks.visibility" = "always";
 
-    "browser.urlbar.suggest.history" = false;
     "browser.urlbar.suggest.recentsearches" = false;
     "browser.urlbar.suggest.topsites" = false;
+    "browser.urlbar.suggest.history" = true;
     "browser.urlbar.suggest.openpage" = true;
   };
     
