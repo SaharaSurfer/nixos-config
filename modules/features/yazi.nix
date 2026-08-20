@@ -10,11 +10,7 @@
     ];
   };
 
-  perSystem = {
-    system,
-    pkgs,
-    ...
-  }: {
+  perSystem = {pkgs, ...}: {
     packages.yazi = inputs.wrapper-modules.wrappers.yazi.wrap {
       inherit pkgs;
       package = pkgs.yazi.override {

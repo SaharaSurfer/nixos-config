@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.nvidia-gpu = {pkgs, ...}: {
+  flake.nixosModules.nvidia-gpu = {
     services.xserver.videoDrivers = ["nvidia"];
 
     hardware.nvidia = {

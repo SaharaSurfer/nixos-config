@@ -1,8 +1,4 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   flake.nixosModules.boot = {pkgs, ...}: {
     boot.loader = {
       efi.canTouchEfiVariables = true;

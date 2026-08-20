@@ -2,7 +2,6 @@
   flake.nixosModules.laptopHardware = {
     config,
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {

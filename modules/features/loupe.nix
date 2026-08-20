@@ -1,8 +1,4 @@
 {
-  self,
-  inputs,
-  ...
-}: {
   flake.nixosModules.loupe = {pkgs, ...}: let
     # Choosing "opengl" as a renderer speeds up start up
     loupeWrappedPkg = pkgs.symlinkJoin {

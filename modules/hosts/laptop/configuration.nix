@@ -4,10 +4,6 @@
   ...
 }: {
   flake.nixosModules.laptopConfiguration = {
-    pkgs,
-    lib,
-    ...
-  }: {
     imports = [
       inputs.disko.nixosModules.disko
       self.diskoConfigurations.hostLaptop
@@ -102,7 +98,7 @@
       isNormalUser = true;
       description = "sahara_surfer";
       extraGroups = ["networkmanager" "wheel"];
-      packages = with pkgs; [];
+      packages = [];
     };
 
     security.sudo.execWheelOnly = true;

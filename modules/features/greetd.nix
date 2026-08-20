@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.greetd = {pkgs, ...}: {
+  flake.nixosModules.greetd = {
     services.greetd = {
       enable = true;
       settings = rec {
