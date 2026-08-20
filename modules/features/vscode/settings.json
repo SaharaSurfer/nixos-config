@@ -6,6 +6,17 @@
 
     "jupyter.askForKernelRestart": false,
 
+    "nix.enableLanguageServer": true,
+    "nix.formatterPath": "alejandra",
+    "nix.serverPath": "nixd",
+    "nix.serverSettings": {
+        "nixd": {
+            "formatting": {
+                "command": "alejandra"
+            }
+        }
+    },
+
     "editor.minimap.enabled": false,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.unicodeHighlight.allowedLocales": {

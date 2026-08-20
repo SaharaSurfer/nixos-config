@@ -8,6 +8,7 @@
         ms-python.vscode-pylance
         ms-toolsai.jupyter
         ms-toolsai.jupyter-renderers
+        jnoortheen.nix-ide
         james-yu.latex-workshop
         shd101wyy.markdown-preview-enhanced
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -19,6 +20,11 @@
         }
       ];
     };
+
+    environment.systemPackages = [
+      pkgs.nixd
+      pkgs.alejandra
+    ];
 
     home-manager.users.sahara_surfer = {
       home.file.".config/Code/User/settings.json".source = ./settings.json;
