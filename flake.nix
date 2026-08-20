@@ -1,7 +1,7 @@
 {
   # This config is needed to skip compilation of noctalia
   nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-substituters = ["https://noctalia.cachix.org"];
     extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
     ];
@@ -17,7 +17,7 @@
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs"; 
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -37,7 +37,8 @@
     };
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake
-    { inherit inputs; }
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake
+    {inherit inputs;}
     (inputs.import-tree ./modules);
 }

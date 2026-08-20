@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.trash = { pkgs, ... }: {
+  flake.nixosModules.trash = {pkgs, ...}: {
     environment.systemPackages = [
       pkgs.trash-cli
     ];
@@ -14,7 +14,7 @@
 
     systemd.timers."trash-cleanup" = {
       description = "Daily trash cleanup timer";
-      wantedBy = [ "timers.target" ];
+      wantedBy = ["timers.target"];
       timerConfig = {
         OnCalendar = "daily";
         Persistent = true;

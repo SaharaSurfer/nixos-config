@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.obsidian = { pkgs, ... }: {
+  flake.nixosModules.obsidian = {pkgs, ...}: {
     /*
     Obsidian configuration is stored along with the
     vault in .obsidian directory

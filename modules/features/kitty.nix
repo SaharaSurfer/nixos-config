@@ -1,11 +1,15 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.kitty = { pkgs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.kitty = {pkgs, ...}: {
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
     ];
   };
 
-  perSystem = { pkgs, ... }: {
+  perSystem = {pkgs, ...}: {
     packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
       inherit pkgs;
       settings = {
@@ -32,7 +36,7 @@
         # green
         color2 = "#a7c080";
         color10 = "#a7c080";
-        
+
         # yellow
         color3 = "#d9bb80";
         color11 = "#d9bb80";

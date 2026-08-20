@@ -15,7 +15,7 @@
 
   "zen.mods.auto-update" = false;
   "zen.welcome-screen.seen" = true;
-  "zen.workspaces.continue-where-left-off" = true; 
+  "zen.workspaces.continue-where-left-off" = true;
   "zen.glance.enabled" = false;
   "zen.view.use-single-toolbar" = false;
   "zen.view.compact.enable-at-startup" = false;

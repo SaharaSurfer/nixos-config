@@ -1,4 +1,9 @@
-{ self, inputs, withSystem, ... }: {
+{
+  self,
+  inputs,
+  withSystem,
+  ...
+}: {
   flake.nixosConfigurations.laptop = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.laptopConfiguration
@@ -13,9 +18,9 @@
       - https://github.com/hercules-ci/flake-parts/issues/339
       - read-only.nix at https://github.com/NixOS/nixpkgs (commit 28096cc)
       */
-      ({ config, ... }: {
+      ({config, ...}: {
         nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
-          {pkgs, ... }: pkgs
+          {pkgs, ...}: pkgs
         );
       })
     ];

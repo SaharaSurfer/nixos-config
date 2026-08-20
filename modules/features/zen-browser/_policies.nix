@@ -19,7 +19,7 @@
     Sessions = false;
     SiteSettings = false;
   };
-  
+
   NoDefaultBookmarks = true;
   SearchEngines = {
     Default = "DuckDuckGo";
@@ -44,7 +44,7 @@
   SkipTermsOfUse = true;
   OverrideFirstRunPage = "";
   OverridePostUpdatePage = "";
-  
+
   Homepage = {
     StartPage = "previous-session";
     NewTabOnRestore = false;
@@ -62,17 +62,17 @@
     "browser.urlbar.suggest.history" = true;
     "browser.urlbar.suggest.openpage" = true;
   };
-    
+
   ExtensionSettings = {
     "uBlock0@raymondhill.net" = {
       installation_mode = "force_installed";
     };
   };
-  
+
   DisableProfileImport = true;
   DisableFirefoxScreenshots = true;
   DisableFirefoxStudies = true;
-  
+
   DisableFormHistory = true;
   AutofillAddressEnabled = false;
   AutofillCreditCardEnabled = false;
@@ -86,7 +86,7 @@
 
   PasswordManagerEnabled = false;
   OfferToSaveLogins = false;
-  
+
   PromptForDownloadLocation = true;
   HardwareAcceleration = true;
 }

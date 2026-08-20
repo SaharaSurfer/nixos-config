@@ -1,5 +1,9 @@
-{ inputs, ... }: {
-  perSystem = { system, pkgs, ... }: 
+{inputs, ...}: {
+  perSystem = {
+    system,
+    pkgs,
+    ...
+  }:
   # TODO: replace with a better wrapper when it arrives
   let
     noctaliaPkg = inputs.noctalia.packages.${system}.default;

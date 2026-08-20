@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.nh = { pkgs, ... }: {
+  flake.nixosModules.nh = {pkgs, ...}: {
     programs.nh = {
       enable = true;
       package = pkgs.nh;

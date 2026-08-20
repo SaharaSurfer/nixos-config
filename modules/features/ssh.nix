@@ -1,7 +1,7 @@
 {
-  flake.nixosModules.ssh = { lib, ... }: {
+  flake.nixosModules.ssh = {lib, ...}: {
     services.gnome.gnome-keyring.enable = true;
-    services.gnome.gcr-ssh-agent.enable = true;    
+    services.gnome.gcr-ssh-agent.enable = true;
 
     programs.ssh = {
       extraConfig = ''

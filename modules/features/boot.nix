@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.boot = { pkgs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.boot = {pkgs, ...}: {
     boot.loader = {
       efi.canTouchEfiVariables = true;
 
@@ -29,17 +33,16 @@
           system = pkgs.stdenv.hostPlatform.system;
           themePkgs = inputs.boot-wars-grub.packages.${system};
           themeName = "rebel_hangar";
-        in
-          "${themePkgs.${themeName}}/theme";
+        in "${themePkgs.${themeName}}/theme";
       };
     };
 
     boot.kernelParams = [
-     "quiet"
-     "splash"
-     "loglevel=3"
-     "udev.log-priority=3"
-     "video=1920x1080"
+      "quiet"
+      "splash"
+      "loglevel=3"
+      "udev.log-priority=3"
+      "video=1920x1080"
     ];
 
     boot.plymouth = {
@@ -48,14 +51,14 @@
 
       themePackages = let
         system = pkgs.stdenv.hostPlatform.system;
-      in
-        [
-          (inputs.boot-wars-plymouth.packages.${system}.default.override {
-            tipText = "Experiment without fear of failure. Apply " +
-              "changes using 'nh os switch' and remove old " +
-              "generations with 'nh clean all'.";
-          })  
-        ];      
+      in [
+        (inputs.boot-wars-plymouth.packages.${system}.default.override {
+          tipText =
+            "Experiment without fear of failure. Apply "
+            + "changes using 'nh os switch' and remove old "
+            + "generations with 'nh clean all'.";
+        })
+      ];
     };
 
     # Some of the security measures described at

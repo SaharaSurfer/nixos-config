@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.intel-gpu = { pkgs, ... }: {
+  flake.nixosModules.intel-gpu = {pkgs, ...}: {
     hardware.graphics = {
       enable = true;
       enable32Bit = true;

@@ -1,15 +1,28 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.niri = { pkgs, lib, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.niri = {
+    pkgs,
+    lib,
+    ...
+  }: {
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.niri;
     };
-  };  
+  };
 
-  perSystem = { pkgs, lib, self', ... }: {
+  perSystem = {
+    pkgs,
+    lib,
+    self',
+    ...
+  }: {
     packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;
-      
+
       settings = {
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
@@ -33,7 +46,7 @@
           tap = {};
           natural-scroll = {};
         };
-        
+
         gestures = {
           hot-corners = {
             off = {};
@@ -55,7 +68,10 @@
             softness = 7;
             spread = 1;
             offset = _: {
-              props = { x = 0; y = 0; };
+              props = {
+                x = 0;
+                y = 0;
+              };
             };
             color = "#a5cec2";
             inactive-color = "#000000";
@@ -64,11 +80,13 @@
 
         # Per window layout overrides
         window-rules = [
-          { # General settings
+          {
+            # General settings
             geometry-corner-radius = 10;
             clip-to-geometry = true;
           }
-          { # Screencast indication
+          {
+            # Screencast indication
             matches = [
               {
                 is-window-cast-target = true;
@@ -86,7 +104,10 @@
               softness = 7;
               spread = 1;
               offset = _: {
-                props = { x = 0; y = 0; };
+                props = {
+                  x = 0;
+                  y = 0;
+                };
               };
               color = "#f38ba8";
               inactive-color = "#000000";
@@ -94,7 +115,7 @@
           }
         ];
 
-        binds = let 
+        binds = let
           kittyExe = lib.getExe self'.packages.kitty;
           noctaliaExe = lib.getExe self'.packages.noctalia;
         in {
@@ -131,12 +152,12 @@
           It seems that to use "XF86MonBrightnessUp" and "XF86MonBrightnessDown"
           on my laptop one requires a specific driver which, for example, is
           implemented here:
-          
+
                       https://github.com/blmhemu/opengigabyte
 
           There is no flake.nix or respective package in nixpkgs at the moment,
           and I'm too lazy to write my own derivation for this driver, so I
-          just use "Mod" as a modifier instead of "Fn". 
+          just use "Mod" as a modifier instead of "Fn".
           */
           "Mod+F3".spawn-sh = "${noctaliaExe} msg brightness-down 5%";
           "Mod+F4".spawn-sh = "${noctaliaExe} msg brightness-up 5%";
@@ -144,7 +165,7 @@
           /*
           I don't use "XF86AudioRaiseVolume", "XF86AudioLowerVolume",
           "XF86AudioMute" keys since similar brightness binds don't work
-          and ig it's better to have some consistency.  
+          and ig it's better to have some consistency.
           */
           "Mod+F7".spawn-sh = "${noctaliaExe} msg volume-mute";
           "Mod+F8".spawn-sh = "${noctaliaExe} msg volume-down 5%";

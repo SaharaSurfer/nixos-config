@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.telegram = { pkgs, ... }: {
+  flake.nixosModules.telegram = {pkgs, ...}: {
     environment.systemPackages = [
       pkgs.telegram-desktop
     ];

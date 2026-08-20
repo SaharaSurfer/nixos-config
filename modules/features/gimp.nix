@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.gimp = { pkgs, ... }: {
+  flake.nixosModules.gimp = {pkgs, ...}: {
     environment.systemPackages = [
       pkgs.gimp
     ];

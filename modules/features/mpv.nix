@@ -1,5 +1,9 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.mpv = { pkgs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.mpv = {pkgs, ...}: {
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.mpv
     ];
@@ -12,7 +16,7 @@
     };
   };
 
-  perSystem = { pkgs, ... }: {
+  perSystem = {pkgs, ...}: {
     packages.mpv = inputs.wrapper-modules.wrappers.mpv.wrap {
       inherit pkgs;
 
@@ -20,7 +24,7 @@
         profile=high-quality
         vo=gpu-next
         gpu-api=opengl
-        
+
         force-window=immediate
         fullscreen=yes
         keep-open=yes
@@ -67,7 +71,7 @@
         thumbfast = {
           path = pkgs.mpvScripts.thumbfast;
         };
-        
+
         mpris = {
           path = pkgs.mpvScripts.mpris;
         };

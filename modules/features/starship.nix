@@ -1,10 +1,9 @@
 {
-  flake.nixosModules.starship = { pkgs, ...}: {
+  flake.nixosModules.starship = {pkgs, ...}: {
     programs.starship = {
       enable = true;
       package = pkgs.starship;
-      presets = [ "pure-preset" ];
+      presets = ["pure-preset"];
     };
   };
 }
-

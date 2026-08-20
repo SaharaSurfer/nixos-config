@@ -1,11 +1,15 @@
-{ self, inputs, ... }: {
-  flake.nixosModules.git = { pkgs, ... }: {
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.nixosModules.git = {pkgs, ...}: {
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.git
     ];
-  };  
+  };
 
-  perSystem = { pkgs, ... }: {
+  perSystem = {pkgs, ...}: {
     packages.git = inputs.wrapper-modules.wrappers.git.wrap {
       inherit pkgs;
       settings = {
