@@ -40,22 +40,14 @@
           };
         };
 
-        window-rule = {
-          geometry-corner-radius = 10;
-          clip-to-geometry = true;
-        };
-
         layout = {
           gaps = 10;
+          focus-ring.off = {};
 
           border = {
             width = 1;
             active-color = "#a5cec2";
             inactive-color = "#a5cec2";
-          };
-
-          focus-ring = {
-            off = {};
           };
 
           shadow = {
@@ -69,6 +61,38 @@
             inactive-color = "#000000";
           };
         };
+
+        # Per window layout overrides
+        window-rules = [
+          { # General settings
+            geometry-corner-radius = 10;
+            clip-to-geometry = true;
+          }
+          { # Screencast indication
+            matches = [
+              {
+                is-window-cast-target = true;
+              }
+            ];
+
+            border = {
+              width = 1;
+              active-color = "#f38ba8";
+              inactive-color = "#f38ba8";
+            };
+
+            shadow = {
+              on = {};
+              softness = 7;
+              spread = 1;
+              offset = _: {
+                props = { x = 0; y = 0; };
+              };
+              color = "#f38ba8";
+              inactive-color = "#000000";
+            };
+          }
+        ];
 
         binds = let 
           kittyExe = lib.getExe self'.packages.kitty;
@@ -89,6 +113,19 @@
           "Mod+C".spawn-sh = "${noctaliaExe} msg panel-toggle clipboard";
           "Mod+Shift+Q".spawn-sh = "${noctaliaExe} msg panel-toggle session";
           "Mod+Shift+S".spawn-sh = "${noctaliaExe} msg screenshot-region";
+
+          /*
+          Currently there is no way to instantly change screencasted window
+          on a click. Proper binds will arrive once PR(s) below is merged
+          or similar functionality implemented.
+
+                    https://github.com/niri-wm/niri/pull/4189
+                    https://github.com/niri-wm/niri/pull/4388
+
+          "Mod+Ctrl+MouseLeft".set-dynamic-cast-window = {};
+          "Mod+Ctrl+MouseRight".set-dynamic-cast-monitor = {};
+          "Mod+Ctrl+MouseMiddle".clear-dynamic-cast-target = {};
+          */
 
           "XF86AudioRaiseVolume".spawn-sh = "${noctaliaExe} msg volume-up 5%";
           "XF86AudioLowerVolume".spawn-sh = "${noctaliaExe} msg volume-down 5%";
