@@ -127,13 +127,28 @@
           "Mod+Ctrl+MouseMiddle".clear-dynamic-cast-target = {};
           */
 
-          "XF86AudioRaiseVolume".spawn-sh = "${noctaliaExe} msg volume-up 5%";
-          "XF86AudioLowerVolume".spawn-sh = "${noctaliaExe} msg volume-down 5%";
-          "XF86AudioMute".spawn-sh = "${noctaliaExe} msg volume-mute";
+          /*
+          It seems that to use "XF86MonBrightnessUp" and "XF86MonBrightnessDown"
+          on my laptop one requires a specific driver which, for example, is
+          implemented here:
+          
+                      https://github.com/blmhemu/opengigabyte
 
-          # TODO: fix these binds (Fn+F3 and Fn+F4 doesn't work)
-          "XF86MonBrightnessUp".spawn-sh = "${noctaliaExe} msg brightness-up 5%";
-          "XF86MonBrightnessDown".spawn-sh = "${noctaliaExe} msg brightness-down 5%";
+          There is no flake.nix or respective package in nixpkgs at the moment,
+          and I'm too lazy to write my own derivation for this driver, so I
+          just use "Mod" as a modifier instead of "Fn". 
+          */
+          "Mod+F3".spawn-sh = "${noctaliaExe} msg brightness-down 5%";
+          "Mod+F4".spawn-sh = "${noctaliaExe} msg brightness-up 5%";
+
+          /*
+          I don't use "XF86AudioRaiseVolume", "XF86AudioLowerVolume",
+          "XF86AudioMute" keys since similar brightness binds don't work
+          and ig it's better to have some consistency.  
+          */
+          "Mod+F7".spawn-sh = "${noctaliaExe} msg volume-mute";
+          "Mod+F8".spawn-sh = "${noctaliaExe} msg volume-down 5%";
+          "Mod+F9".spawn-sh = "${noctaliaExe} msg volume-up 5%";
 
           "Mod+Up".focus-window-up = {};
           "Mod+Down".focus-window-down = {};
