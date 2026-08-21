@@ -14,6 +14,7 @@
       self.nixosModules.nvidia-gpu
       self.nixosModules.boot
       self.nixosModules.greetd
+      self.nixosModules.nix
       self.nixosModules.nh
       inputs.home-manager.nixosModules.home-manager
       {
@@ -104,11 +105,6 @@
     };
 
     security.sudo.execWheelOnly = true;
-
-    nix.settings = {
-      trusted-users = ["sahara_surfer"]; # Allows to add cache servers
-      experimental-features = ["nix-command" "flakes"];
-    };
 
     system.stateVersion = "26.05";
     home-manager.users.sahara_surfer = {

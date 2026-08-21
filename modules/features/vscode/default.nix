@@ -22,12 +22,6 @@
         ];
     };
 
-    environment.systemPackages = [
-      pkgs.nixd
-      pkgs.alejandra
-      pkgs.statix
-    ];
-
     home-manager.users.sahara_surfer = {
       home.file.".config/Code/User/settings.json".source = ./settings.json;
     };
