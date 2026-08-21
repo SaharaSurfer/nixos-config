@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   flake.nixosModules.vscode = {pkgs, ...}: {
     programs.vscode = {
       enable = true;
@@ -22,7 +22,7 @@
         ];
     };
 
-    home-manager.users.sahara_surfer = {
+    home-manager.users.${config.preferences.user.name} = {
       home.file.".config/Code/User/settings.json".source = ./settings.json;
     };
   };

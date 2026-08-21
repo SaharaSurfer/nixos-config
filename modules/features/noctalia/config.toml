@@ -596,7 +596,7 @@ wallpaper_scheme = "m3-monochrome"
     enable_community_templates = true
 
 [wallpaper]
-directory = "/home/sahara_surfer/nixos-config/modules/features/noctalia/wallpapers"
+directory = "~/nixos-config/modules/features/noctalia/wallpapers"
 directory_dark = ""
 directory_light = ""
 edge_smoothness = 0.30000001192092896
@@ -615,13 +615,13 @@ transition_on_startup = false
     recursive = true
 
     [wallpaper.default]
-    path = "/home/sahara_surfer/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
+    path = "~/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
 
     [wallpaper.last]
-    path = "/home/sahara_surfer/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
+    path = "~/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/sahara_surfer/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
+    path = "~/nixos-config/modules/features/noctalia/wallpapers/dagobah.png"
 
 [weather]
 effects = true
@@ -651,7 +651,6 @@ scale = 0.94999999999999996
 type = "clock"
 
 [widget.control-center]
-custom_image = "/home/sahara_surfer/Downloads/NixOS.png"
 type = "control-center"
 
 [widget.cpu]

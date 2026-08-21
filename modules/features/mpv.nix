@@ -49,7 +49,7 @@
         screenshot-format=png
         screenshot-high-bit-depth=yes
         screenshot-png-compression=7
-        screenshot-directory=/home/sahara_surfer/Pictures/
+        screenshot-directory="~/Pictures/"
         screenshot-template="SPOILER_%f-%wH.%wM.%wS.%wT"
       '';
 

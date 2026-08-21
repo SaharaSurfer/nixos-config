@@ -1,6 +1,7 @@
 {
   self,
   inputs,
+  config,
   ...
 }: {
   flake.nixosModules.jujutsu = {pkgs, ...}: {
@@ -14,8 +15,8 @@
       inherit pkgs;
       settings = {
         user = {
-          name = "SaharaSurfer";
-          email = "topbo3abp@gmail.com";
+          name = config.preferences.user.gitName;
+          email = config.preferences.user.email;
         };
       };
     };

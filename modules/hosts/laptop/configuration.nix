@@ -1,6 +1,7 @@
 {
   self,
   inputs,
+  config,
   ...
 }: {
   flake.nixosModules.laptopConfiguration = {
@@ -47,7 +48,7 @@
 
     # Networking
     networking = {
-      hostName = "Sahara";
+      hostName = "laptop";
       networkmanager.enable = true;
       firewall.enable = true;
     };
@@ -97,9 +98,9 @@
     };
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users."sahara_surfer" = {
+    users.users."${config.preferences.user.name}" = {
       isNormalUser = true;
-      description = "sahara_surfer";
+      description = "${config.preferences.user.name}'s account";
       extraGroups = ["networkmanager" "wheel"];
       packages = [];
     };
@@ -107,7 +108,7 @@
     security.sudo.execWheelOnly = true;
 
     system.stateVersion = "26.05";
-    home-manager.users.sahara_surfer = {
+    home-manager.users.${config.preferences.user.name} = {
       home.stateVersion = "26.05";
     };
   };

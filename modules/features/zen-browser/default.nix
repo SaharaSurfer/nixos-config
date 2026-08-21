@@ -1,6 +1,10 @@
-{inputs, ...}: {
+{
+  inputs,
+  config,
+  ...
+}: {
   flake.nixosModules.zen-browser = {
-    home-manager.users.sahara_surfer = {
+    home-manager.users.${config.preferences.user.name} = {
       imports = [inputs.zen-browser.homeModules.beta];
 
       programs.zen-browser = {
