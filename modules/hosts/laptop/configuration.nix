@@ -73,12 +73,9 @@
       pulse.enable = true;
     };
 
-    # Set your time zone.
     time.timeZone = "Asia/Yekaterinburg";
 
-    # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
-
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "en_US.UTF-8";
       LC_IDENTIFICATION = "en_US.UTF-8";
@@ -91,18 +88,10 @@
       LC_TIME = "en_US.UTF-8";
     };
 
-    # Configure keymap in X11
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
-
-    # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users."${config.preferences.user.name}" = {
       isNormalUser = true;
       description = "${config.preferences.user.name}'s account";
       extraGroups = ["networkmanager" "wheel"];
-      packages = [];
     };
 
     security.sudo.execWheelOnly = true;
