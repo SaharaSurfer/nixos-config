@@ -35,8 +35,8 @@
         pkgs.trash-cli # omni-trash
       ];
 
-      plugins = with pkgs.yaziPlugins; {
-        omni-trash = omni-trash;
+      plugins = {
+        omni-trash = pkgs.yaziPlugins.omni-trash;
       };
 
       settings.keymap.mgr.prepend_keymap = [

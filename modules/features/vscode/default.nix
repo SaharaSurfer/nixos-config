@@ -25,6 +25,7 @@
     environment.systemPackages = [
       pkgs.nixd
       pkgs.alejandra
+      pkgs.statix
     ];
 
     home-manager.users.sahara_surfer = {

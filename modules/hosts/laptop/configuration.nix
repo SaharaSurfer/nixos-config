@@ -45,9 +45,11 @@
     ];
 
     # Networking
-    networking.hostName = "Sahara";
-    networking.networkmanager.enable = true;
-    networking.firewall.enable = true;
+    networking = {
+      hostName = "Sahara";
+      networkmanager.enable = true;
+      firewall.enable = true;
+    };
 
     # Bluetooth
     hardware.bluetooth = {
