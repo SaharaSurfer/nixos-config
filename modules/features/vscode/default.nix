@@ -11,7 +11,6 @@
           ms-toolsai.jupyter-renderers
           jnoortheen.nix-ide
           james-yu.latex-workshop
-          shd101wyy.markdown-preview-enhanced
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

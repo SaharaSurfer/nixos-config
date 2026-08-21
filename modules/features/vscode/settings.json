@@ -47,5 +47,9 @@
 
     "breadcrumbs.enabled": false,
 
+    "update.mode": "none",
+    "extensions.autoUpdate": "off",
+
+    "telemetry.feedback.enabled": false,
     "telemetry.telemetryLevel": "off"
 }
